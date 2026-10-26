@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_BROKER_DAEMON_MESSAGE</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>EEE - Broker inter-daemon message (PoC)</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BROKER_DAEMON_MESSAGE</CLSNAME>
+     <CMPNAME>CREATE_ACK</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create an ack message (broker→publish)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BROKER_DAEMON_MESSAGE</CLSNAME>
+     <CMPNAME>CREATE_CONNECT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create a connect message</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BROKER_DAEMON_MESSAGE</CLSNAME>
+     <CMPNAME>CREATE_DISCONNECT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create a disconnect message</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BROKER_DAEMON_MESSAGE</CLSNAME>
+     <CMPNAME>CREATE_EVENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create an event message (publish→broker)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BROKER_DAEMON_MESSAGE</CLSNAME>
+     <CMPNAME>CREATE_FAIL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create a fail message (broker→publish)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BROKER_DAEMON_MESSAGE</CLSNAME>
+     <CMPNAME>GET_EVENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return the carried event</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,19 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: { typeName: 'Event',
+                  typeNamePlural: 'Events',
+                  title: { type: #STANDARD, value: 'EventId' } }
+
+annotate view ZCL_I_BROKER_EVENT with
+{
+  @UI.lineItem: [ { position: 10, importance: #HIGH } ]
+  Topic;
+
+  @UI.lineItem: [ { position: 20, importance: #HIGH } ]
+  EventId;
+
+  @UI.lineItem: [ { position: 30, importance: #MEDIUM } ]
+  ArrivalTime;
+
+  @UI.lineItem: [ { position: 40, importance: #MEDIUM } ]
+  Status;
+}

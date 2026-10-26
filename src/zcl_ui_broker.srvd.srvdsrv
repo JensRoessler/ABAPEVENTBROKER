@@ -1,0 +1,8 @@
+@EndUserText.label: 'Broker Event Mesh UI Service'
+define service ZCL_UI_BROKER
+{
+  expose ZCL_I_BROKER       as Broker;
+  expose ZCL_I_BROKER_QUEUE as Queue;
+  expose ZCL_I_BROKER_Q_SUB as Sub;
+  expose ZCL_I_BROKER_EVENT as Event;
+}

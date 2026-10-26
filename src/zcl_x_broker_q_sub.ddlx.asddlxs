@@ -1,0 +1,26 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: { typeName: 'Subscription',
+                  typeNamePlural: 'Subscriptions',
+                  title: { type: #STANDARD, value: 'Topic' } }
+
+annotate view ZCL_I_BROKER_Q_SUB with
+{
+  @UI.facet: [
+    {
+      id: 'GeneralInfo',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'General Information',
+      position: 10
+    }
+  ]
+  @UI.lineItem: [ { position: 10, importance: #HIGH } ]
+  Broker;
+
+  @UI.lineItem: [ { position: 20, importance: #HIGH } ]
+  Queue;
+
+  @UI.lineItem: [ { position: 30, importance: #HIGH } ]
+  @UI.identification: [ { position: 10 } ]
+  Topic;
+}

@@ -1,0 +1,45 @@
+unmanaged implementation in class zbp_cl_i_broker unique;
+strict ( 2 );
+
+define behavior for ZCL_I_BROKER alias Broker
+lock master
+authorization master ( instance )
+{
+  field ( readonly ) CreatedBy, CreatedTs, Status;
+  create ( authorization : global );
+  delete;
+  association _Queue { create; }
+}
+
+define behavior for ZCL_I_BROKER_QUEUE alias Queue
+lock dependent by _Broker
+authorization dependent by _Broker
+{
+  field ( readonly ) Broker;
+  create;
+  update;
+  delete;
+  association _Broker;
+  association _Sub { create; }
+  association _Event;
+}
+
+define behavior for ZCL_I_BROKER_Q_SUB alias Sub
+lock dependent by _Broker
+authorization dependent by _Broker
+{
+  field ( readonly ) Broker, Queue;
+  create;
+  delete;
+  association _Queue;
+  association _Broker;
+}
+
+define behavior for ZCL_I_BROKER_EVENT alias Event
+lock dependent by _Broker
+authorization dependent by _Broker
+{
+  field ( readonly ) Broker, Queue;
+  association _Queue;
+  association _Broker;
+}

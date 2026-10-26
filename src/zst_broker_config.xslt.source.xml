@@ -1,0 +1,33 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates"
+              xmlns:cl="http://www.sap.com/abapxml/types/class-pool/ZCL_BROKER_CONFIG">
+
+  <tt:root name="config" type="cl:ty_s_config"/>
+
+  <tt:template>
+    <object>
+      <str name="defaultAction">
+        <tt:value ref="config.default_action"/>
+      </str>
+      <array name="rules">
+        <tt:loop ref="config.rules">
+          <object>
+            <str name="trigger">
+              <tt:value ref="trigger"/>
+            </str>
+            <num name="nth">
+              <tt:value ref="nth"/>
+            </num>
+            <str name="action">
+              <tt:value ref="action"/>
+            </str>
+            <num name="delaySec">
+              <tt:value ref="delay_sec"/>
+            </num>
+          </object>
+        </tt:loop>
+      </array>
+    </object>
+  </tt:template>
+
+</tt:transform>
